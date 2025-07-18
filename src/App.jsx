@@ -1,6 +1,5 @@
 import React from "react";
 import Nav from "./sections/Nav";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 
@@ -12,7 +11,6 @@ const App = () => {
       <About/>      
     
 
-      <Routes>{/* <Route path="/" element= {<Home></Home>}></Route> */}</Routes>
     </div>
   );
 };

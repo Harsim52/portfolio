@@ -1,8 +1,4 @@
-import grid1 from "../assets/coding-pov.png";
 import Card from "../components/Card";
-import img1 from "../assets/logos/react.svg";
-import img2 from "../assets/logos/tailwindcss.svg";
-import img3 from "../assets/logos/html5.svg";
 import { useRef } from "react";
 import { Globe } from "../components/Globe";
 import CopyEmailButton from "../components/CopyEmailButton";
@@ -20,7 +16,7 @@ const About = () => {
         {/* Grid 1 */}
         <div className="flex items-end grid-default-color grid-1">
           <img
-            src={grid1}
+            src="/assets/coding-pov.png"
             alt="coding-pov"
             className="absolute scale-[1.75] -top-[1rem] -right-[5rem] md:scale-[3] md:left-50 md:inset-y-10  lg:scale-[2.5]"
           />
@@ -69,17 +65,17 @@ const About = () => {
               containerRef={grid2Container}
             />
             <Card
-              image={img1}
+              image="/assets/logos/react.svg"
               style={{ rotate: "30deg", top: "70%", left: "70%" }}
               containerRef={grid2Container}
             />
             <Card
-              image={img2}
+              image="/assets/logos/tailwindcss.svg"
               style={{ rotate: "30deg", top: "10%", left: "70%" }}
               containerRef={grid2Container}
             />
             <Card
-              image={img3}
+              image="/assets/logos/html5.svg"
               style={{ rotate: "30deg", top: "30%", left: "5%" }}
               containerRef={grid2Container}
             />

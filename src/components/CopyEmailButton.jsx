@@ -1,5 +1,4 @@
-import copyImg from "../assets/copy.svg";
-import copyDoneImg from "../assets/copy-done.svg";
+
 import { useState } from "react";
 import { AnimatePresence, easeIn, easeInOut, motion } from "motion/react";
 
@@ -28,7 +27,7 @@ const CopyEmailButton = () => {
             transition={{ duration: 0.1, ease: easeInOut }}
             key="copy"
           >
-            <img src={copyDoneImg} alt="copy image" className="w-5" />
+            <img src="/assets/copy-done.svg" alt="copy image" className="w-5" />
             Email Address Copied
           </motion.p>
         ) : (
@@ -40,7 +39,7 @@ const CopyEmailButton = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.1 }}
           >
-            <img src={copyImg} alt="copy image" className="w-5" />
+            <img src="/assets/copy.svg" alt="copy image" className="w-5" />
             Copy Email Address
           </motion.p>
         )}

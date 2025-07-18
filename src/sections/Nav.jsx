@@ -1,23 +1,20 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import menu from "../assets/menu.svg";
-import close from "../assets/close.svg";
+import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 function Navigation() {
   return (
     <ul className="nav-ul">
       <li className="  transition-colors text-neutral-400 hover:text-white">
-        <Link>Home</Link>
+        <a>Home</a>
       </li>
       <li className="transition-colors text-neutral-400 hover:text-white">
-        <Link>About</Link>
+        <a>About</a>
       </li>
       <li className="transition-colors text-neutral-400 hover:text-white">
-        <Link>Work</Link>
+        <a>Work</a>
       </li>
       <li className="transition-colors text-neutral-400 hover:text-white">
-        <Link>Contact</Link>
+        <a>Contact</a>
       </li>
     </ul>
   );
@@ -30,33 +27,40 @@ const Nav = () => {
   };
 
   return (
-    <div className={`fixed z-20 inset-x-0 w-full ${isOpen? " bg-primary/90 ":  "bg-primary/40" } pt-2`}>
+    <div
+      className={`fixed z-20 inset-x-0 w-full ${
+        isOpen ? " bg-primary/90 " : "bg-primary/40"
+      } pt-2`}
+    >
       <div className="mx-auto c-space max-w-7xl">
         <div className="flex justify-between items-center py-2 sm:py-0">
-          <Link
+          <a
             to="/"
             className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
           >
             All
-          </Link>
+          </a>
           <button
             onClick={handleMenu}
             className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
           >
-            <img src={isOpen ? close : menu} alt="menu" className="w-6 h-6" />
+            <img
+              src={isOpen ? "/assets/close.svg" : "/assets/menu.svg"}
+              alt="menu"
+              className="w-6 h-6"
+            />
           </button>
           <nav className="hidden sm:flex ">
             <Navigation />
           </nav>
         </div>
         <AnimatePresence initial={false}>
-          
           {isOpen ? (
             <motion.div
               className="block overflow-hidden text-center sm:hidden "
-              initial={{ opacity: 0, x:-10 }}
+              initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1  }}
+              transition={{ duration: 1 }}
               style={{ height: "100vh" }}
               exit={{ opacity: 0, x: -10 }}
             >

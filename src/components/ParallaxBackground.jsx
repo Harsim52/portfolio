@@ -14,22 +14,22 @@ const mountain1Y = useTransform(x, [0,0.5],["0%", "0%"])
     <section className="absolute inset-0 bg-black/40">
       <div className="relative h-screen overflow-y-hidden">
         {/* Background */}
-        <div className="absolute inset-0 w-full h-screen -z-50 bg-[url('src/assets/sky.jpg')] bg-cover bg-bottom  " />
+        <div className="absolute inset-0 w-full h-screen -z-50 bg-[url('/assets/sky.jpg')] bg-cover bg-bottom  " />
         {/* mountain layer-3 */}
 
-        <motion.div className="absolute inset-0 -z-40 bg-[url('src/assets/mountain-3.png')] bg-cover bg-bottom "  style= {{y: mountain3Y}} />
+        <motion.div className="absolute inset-0 -z-40 bg-[url('/assets/mountain-3.png')] bg-cover bg-bottom "  style= {{y: mountain3Y}} />
 
         {/* Planets */}
 
-        <motion.div className=" absolute inset-0 -z-30 bg-[url('src/assets/planets.png')] bg-cover bg-bottom  "  style= {{x: planetsX}} />
+        <motion.div className=" absolute inset-0 -z-30 bg-[url('/assets/planets.png')] bg-cover bg-bottom  "  style= {{x: planetsX}} />
 
         {/* Mountain layer-2 */}
 
-        <motion.div className=" absolute inset-0 -z-20 bg-[url('src/assets/mountain-2.png')] bg-cover bg-bottom  "  style= {{y: mountain2Y}} />
+        <motion.div className=" absolute inset-0 -z-20 bg-[url('/assets/mountain-2.png')] bg-cover bg-bottom  "  style= {{y: mountain2Y}} />
 
         {/* Mountain layer-1 */}
 
-        <motion.div className=" absolute inset-0 -z-10 bg-[url('src/assets/mountain-1.png')] bg-cover bg-bottom  "  style= {{y: mountain1Y}}/>
+        <motion.div className=" absolute inset-0 -z-10 bg-[url('/assets/mountain-1.png')] bg-cover bg-bottom  "  style= {{y: mountain1Y}}/>
       </div>
     </section>
   );
